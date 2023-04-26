@@ -6,7 +6,9 @@ namespace crawler
 {
 void WebCrawler::fetchContent()
 {
-    std::cout << to_string(_response);
+    std::string response = to_string(_response);
+    std::string response_body = extract_body(response);
+    std::cout << response_body << std::endl;
 }
 
 void WebCrawler::run()
